@@ -1,0 +1,54 @@
+# A simple .yml template locate on <repository/.github/workflows/appdoem_ci.yml>
+name: APPDOME_CI_EXAMPLE
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: Appdome build-2secure
+  # You may pin to the exact commit or the version.
+  # uses: Appdome/github_build-2secure@32d39d5344526834466a727304d1613996808a42
+      uses: Appdome/github_build-2secure@1.0
+      with:
+        # Appdome API key
+        APPDOME_API_TOKEN: # default is !
+        # APK file
+        APP_FILE: # default is !
+        # Appdome FusionSetId iOS/Android
+        FUSION_SET_ID: # default is !
+        # iOS/Android Signin option
+        SIGN_OPTIONS: 
+        # Keystore sign file
+        KEYSTORE_FILE: # optional, default is !
+        # iOS sign file
+        MOBILE_PROVISION_PROFILE_FILE: # optional, default is !
+        # iOS sign file
+        ENTITLEMENTS_FILE: # optional, default is !
+        # Keystore password sign file
+        KEYSTORE_PASSWORD: # optional, default is !
+        # keystore alias
+        KEYSTORE_ALIAS: # optional, default is !
+        # keystore key password
+        KEYSTORE_KEY_PASSWORD: # optional, default is !
+        # signing sha1 fingerprint
+        SIGN_FINGERPRINT: # optional, default is !
+        # Google Play App Signing program
+        GOOGLE-PLAY-SIGNING: # optional
+        # your team-id
+        TEAM-ID: # optional, default is !
