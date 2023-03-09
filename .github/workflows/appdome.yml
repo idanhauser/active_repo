@@ -22,19 +22,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Appdome build-2secure
-  # You may pin to the exact commit or the version.
-  # uses: Appdome/github_build-2secure@32d39d5344526834466a727304d1613996808a42
       uses: Appdome/github_build-2secure@1.0
       with:
-   # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    uses: Appdome/github_build-2secure@1.0
-    with:
-      APP_FILE: "https://github.com/idanhauser/TestAppdome_orb_private/raw/main/files/Trends_ios15.ipa"
-      FUSION_SET_ID: "Appdome fusion set Android"
-      SIGN_OPTIONS: "AUTO_SIGNING"
-      APPDOME_API_TOKEN: ${{secrets.APPDOME_API_KEY}}
-      KEYSTORE_FILE: ${{secrets.KEYSTORE_BASE64}}
-      KEYSTORE_PASSWORD: ${{secrets.KEYSTORE_PASSWORD}}
-      KEYSTORE_ALIAS: ${{secrets.KEYSTORE_ALIAS}}
-      KEYSTORE_KEY_PASSWORD: ${{secrets.KEYSTORE_KEY_PASS}}
+        APP_FILE: "https://github.com/idanhauser/TestAppdome_orb_private/raw/main/files/Trends_ios15.ipa"
+        FUSION_SET_ID: "Appdome fusion set Android"
+        SIGN_OPTIONS: "AUTO_SIGNING"
+        APPDOME_API_TOKEN: ${{secrets.APPDOME_API_KEY}}
+        KEYSTORE_FILE: ${{secrets.KEYSTORE_BASE64}}
+        KEYSTORE_PASSWORD: ${{secrets.KEYSTORE_PASSWORD}}
+        KEYSTORE_ALIAS: ${{secrets.KEYSTORE_ALIAS}}
+        KEYSTORE_KEY_PASSWORD: ${{secrets.KEYSTORE_KEY_PASS}}
 
